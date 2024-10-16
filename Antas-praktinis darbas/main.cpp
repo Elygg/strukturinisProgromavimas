@@ -22,7 +22,27 @@ bool Balsiu_palyginimas() {
     return  false;
 }
 
-    void Maziausias_bendras_daliklis() {
+void Maziausias_bendras_daliklis() {
+    int skaicius1;
+    int skaicius2;
+
+    int dbd;
+    cout << "iveskite pirma skaiciu" << endl;
+    cin >> skaicius1;
+    cout << "iveskite antra skaiciu" << endl;
+    cin >> skaicius2;
+
+    while (abs(skaicius1) &&  abs(skaicius2))
+        if (abs(skaicius1) > abs(skaicius2)) skaicius1 %= skaicius2;
+            else skaicius2 %= skaicius1;
+    dbd = skaicius1 + skaicius2;
+
+    cout << "didziausias bendras daliklis " << dbd << endl;
+
+
+
+
+
 
     }
 
