@@ -4,7 +4,7 @@ using namespace std;
 
 
 bool Balsiu_palyginimas() {
-    string balses[] = {"a", "e", "i", "o", "u",};
+    string balses[] = {"a", "ą", "e", "ę", "ė",  "i", "į", "y", "o", "u", "ų", "ū", };
 
     string ivedimas;
 
@@ -12,13 +12,14 @@ bool Balsiu_palyginimas() {
     cin >> ivedimas;
 
 
-    for(int i = 0; i < 1; i++) {
+    for(int i = 0; i < 5; i++) {
         if(balses[i] == ivedimas) {
-            cout << "radom" << endl;
-        } else {
-            cout << "nebalse" << endl;
+            cout << "balse" << endl;
+            return true;
         }
     }
+    cout << "nebalse" << endl;
+    return  false;
 }
 
     void Maziausias_bendras_daliklis() {
