@@ -40,15 +40,34 @@ void Maziausias_bendras_daliklis() {
     cout << "didziausias bendras daliklis " << dbd << endl;
 
 
-
-
-
-
     }
 
     void Zaidimas() {
-    cout << "Zaidimas" << endl;
+    srand(time(0));
+    int randomNumber = rand() % 101;
+    int spejimas;
+
+    cout << "iveskite spejima" << endl;
+    cout << randomNumber << endl;
+    cin >> spejimas;
+
+    while (randomNumber !=  spejimas ) {
+        if(randomNumber < spejimas) {
+            cout << "spejimas per didelis" << endl;
+        }
+        else if (randomNumber > spejimas) {
+            cout << "spejimas per mazas" << endl;
+        }
+
+        cout << "iveskite spejima is naujo" << endl;
+        cin >> spejimas;
+        }
+        {
+            cout << "spejimas lygus" << endl;
+        }
     }
+
+
 
     void fizzBuzz() {
 
