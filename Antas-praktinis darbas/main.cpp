@@ -10,15 +10,16 @@ bool Balsiu_palyginimas() {
 
     cout << "iveskite betokia raide" << endl;
     cin >> ivedimas;
-
-
-    for(int i = 0; i < 5; i++) {
+    // ziuri ar yra balse
+    for(int i = 0; i < 12; i++) {
         if(balses[i] == ivedimas) {
             cout << "balse" << endl;
             return true;
         }
     }
+
     cout << "nebalse" << endl;
+
     return  false;
 }
 
@@ -39,10 +40,9 @@ void Maziausias_bendras_daliklis() {
 
     cout << "didziausias bendras daliklis " << dbd << endl;
 
-
     }
 
-    void Zaidimas() {
+void Zaidimas() {
     srand(time(0));
     int randomNumber = rand() % 101;
     int spejimas;
@@ -50,7 +50,7 @@ void Maziausias_bendras_daliklis() {
     cout << "iveskite spejima" << endl;
     cout << randomNumber << endl;
     cin >> spejimas;
-
+    //lygina ar spejimas lygus, mazesnis, didesnis
     while (randomNumber !=  spejimas ) {
         if(randomNumber < spejimas) {
             cout << "spejimas per didelis" << endl;
@@ -69,17 +69,37 @@ void Maziausias_bendras_daliklis() {
 
 
 
-    void fizzBuzz() {
+    void fizzBuzz(int n) {
+    cout << "iveskite teigiama sveika skaiciu" << endl;
+    cin >> n;
 
+    // tikrina ar skaicius teigiamas
+    if (n <= 0) {
+        cout << "prasome ivesti teigiama skaiciu";
+        cin >>n;
     }
 
+    for (int i = 1; i <= n; i++) {
+        if (i % 3 == 0 && i % 5 == 0) {
+            cout << "FizzBuzz " << endl; //ar dalinasi is 3 ir 5
+        }
+        else if (i % 5 == 0) {
+            cout << "Buzz " << endl; // ar dalinasi is 5
+        }
+        else if (i % 3 == 0) {
+            cout << "Fizz " << endl; // ar dalinasi is 3
+        }
+        else {
+            cout << i << endl;
+        }
+    }
+}
 
 
 
     int main() {
-
-        int pasirinkimas;
-
+    int pasirinkimas;
+    int n;
     cout << "pasirinkite funkcija" << endl;
     cout << "pasirinkite funkcija" << endl;
     cout << "1-balses" << endl;
@@ -102,7 +122,7 @@ void Maziausias_bendras_daliklis() {
                     Zaidimas();
                 break;
                 case 4:
-                    fizzBuzz();
+                    fizzBuzz(n);
                 break;
                 default:
                     cout << "Neteisingas pasirinkimas. Bandykite dar karta." << endl;
