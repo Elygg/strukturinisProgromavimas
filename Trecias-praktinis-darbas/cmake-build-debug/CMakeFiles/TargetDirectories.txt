@@ -1,0 +1,3 @@
+C:/Users/eligi/Documents/strukturinis-programavimas/Trecias-praktinis-darbas/cmake-build-debug/CMakeFiles/Trecias_praktinis_darbas.dir
+C:/Users/eligi/Documents/strukturinis-programavimas/Trecias-praktinis-darbas/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/eligi/Documents/strukturinis-programavimas/Trecias-praktinis-darbas/cmake-build-debug/CMakeFiles/rebuild_cache.dir
