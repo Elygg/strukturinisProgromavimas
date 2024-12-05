@@ -73,7 +73,8 @@ string sifravimas_ascii(const string& text, const string& key) {
     int key_index = 0;
 
     for (char c : text) {
-        char encrypted_char = c + (key[key_index] - '0');
+
+        char encrypted_char = (c - 32 + (key[key_index] - '0')) % 95 + 32;
         encrypted_text += encrypted_char;
         key_index = (key_index + 1) % key_length;
     }
@@ -81,13 +82,15 @@ string sifravimas_ascii(const string& text, const string& key) {
     return encrypted_text;
 }
 
+
 string desifravimas_ascii(const string& text, const string& key) {
     string decrypted_text = "";
     int key_length = key.length();
     int key_index = 0;
 
     for (char c : text) {
-        char decrypted_char = c - (key[key_index] - '0');
+
+        char decrypted_char = (c - 32 - (key[key_index] - '0') + 95) % 95 + 32;
         decrypted_text += decrypted_char;
         key_index = (key_index + 1) % key_length;
     }
