@@ -83,7 +83,7 @@ string sifravimas_ascii(const string& text, const string& key) {
 
 string desifravimas_ascii(const string& text, const string& key) {
     string decrypted_text = "";
-    int key_length = key.length();
+    int key_length = key.length();S
     int key_index = 0;
 
     for (char c : text) {
