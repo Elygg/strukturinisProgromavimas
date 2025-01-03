@@ -89,20 +89,20 @@ void printCheck(const menuItemType menuList[], const int quantityList[])
         {
             cout << quantityList[i] << " "
                  << left << setw(36) << menuList[i].menuItem
-                 << fixed << setprecision(2) << menuList[i].menuPrice << "€" << endl;
+                 << fixed << setprecision(2) << menuList[i].menuPrice << "Eur." << endl;
         }
     }
 
 
     cout << endl;
     cout << left << setw(36) << "Mokesciai"
-         << fixed << setprecision(2) << tax << "€" << endl;
+         << fixed << setprecision(2) << tax << "Eur." << endl;
     cout << left << setw(36) << "Galutine suma"
-         << fixed << setprecision(2) << total << "€" << endl;
+         << fixed << setprecision(2) << total << "Eur." << endl;
     cout << "----------------------------------------" << endl;
 
 
-    ofstream outFile("receipt.txt");
+    ofstream outFile("cekis.txt");
     if(outFile.is_open())
     {
         outFile << "Sveiki atvykę i restorana „Brukne“\n\n";
@@ -112,14 +112,14 @@ void printCheck(const menuItemType menuList[], const int quantityList[])
             {
                 outFile << quantityList[i] << " "
                         << left << setw(36) << menuList[i].menuItem
-                        << fixed << setprecision(2) << menuList[i].menuPrice << "€\n";
+                        << fixed << setprecision(2) << menuList[i].menuPrice << "Eur.\n";
             }
         }
         outFile << "\n"
                 << left << setw(36) << "Mokesčiai"
-                << fixed << setprecision(2) << tax << "€\n"
+                << fixed << setprecision(2) << tax << "Eur.\n"
                 << left << setw(36) << "Galutinė suma"
-                << fixed << setprecision(2) << total << "€\n";
+                << fixed << setprecision(2) << total << "Eur.\n";
         outFile.close();
     }
     else
